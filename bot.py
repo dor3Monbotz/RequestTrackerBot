@@ -90,7 +90,7 @@ async def forwardedHandler(bot:Update, msg:Message):
     forwardInfo = msg.forward_from_chat
     if forwardInfo.type == "channel":   # If message forwarded from channel
         await msg.reply_text(
-            f"<b>Hey😁, Your Channel ID is <code>{forwardInfo.id}</code>\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+            f"<b>Hey😁, Your Channel ID is <code>{forwardInfo.id}</code>\n\n😊Join @projectcrown & @crownbotzsupport for getting more awesome 🤖bots like this.</b>",
             parse_mode = "html"
         )
     return
@@ -137,12 +137,12 @@ async def groupChannelIDHandler(bot:Update, msg:Message):
                     botSelfGroup = await bot.get_chat_member(int(groupID), 'me')
                 except (PeerIdInvalid, ValueError):   # If given group id is invalid
                     await msg.reply_text(
-                        "<b>😒Group ID is wrong.\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+                        "<b>😒Group ID is wrong.\n\n😊Join @projectcrown for getting more awesome 🤖bots like this.</b>",
                         parse_mode = "html"
                     )
                 except UserNotParticipant:  # If bot is not in group
                     await msg.reply_text(
-                        "<b>😁Add me in group and make me admin, then use /add.\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+                        "<b>😁Add me in group and make me admin, then use /add.\n\n😊Join @projectcrown for getting more awesome 🤖bots like this.</b>",
                         parse_mode = "html"
                     )
                 else:
@@ -161,7 +161,7 @@ async def groupChannelIDHandler(bot:Update, msg:Message):
                             )
                         except (ChatIdInvalid, ChannelInvalid): # If given channel id is invalid
                             await msg.reply_text(
-                                "<b>😒Channel ID is wrong.\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+                                "<b>😒Channel ID is wrong.\n\n😊Join @projectcrown & @crownbotzsupport for getting more awesome 🤖bots like this.</b>",
                                 parse_mode = "html"
                             )
                         else:
@@ -177,12 +177,12 @@ async def groupChannelIDHandler(bot:Update, msg:Message):
                                     }
                                 )
                                 await msg.reply_text(
-                                    "<b>Your Group and Channel has now been added SuccessFully🥳.\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+                                    "<b>Your Group and Channel has now been added SuccessFully🥳.\n\n😊Join @projectcrown & @crownbotzsupport for getting more awesome 🤖bots like this.</b>",
                                     parse_mode = "html"
                                 )
     else:   # If command is invalid
         await msg.reply_text(
-            "<b>Invalid Format😒\nSend Group ID & Channel ID in this format <code>/add GroupID ChannelID</code>.\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+            "<b>Invalid Format😒\nSend Group ID & Channel ID in this format <code>/add GroupID ChannelID</code>.\n\n😊Join @projectcrown & @crownbotzsupport for getting more awesome 🤖bots like this.</b>",
             parse_mode = "html"
         )
     return
@@ -222,7 +222,7 @@ async def channelgroupRemover(bot:Update, msg:Message):
                     break
             else:   # If group id not found in database
                 await msg.reply_text(
-                    "<b>Given Group ID is not found in our Database🤔.\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+                    "<b>Given Group ID is not found in our Database🤔.\n\n😊Join @projectcrown & @crownbotzsupport for getting more awesome 🤖bots like this.</b>",
                     parse_mode = "html"
                 )
     else:   # If command is invalid
